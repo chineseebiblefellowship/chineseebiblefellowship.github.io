@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>本站已弃用，请访问 fenli.org</title>
+  <meta name="description" content="本站已弃用，请访问 fenli.org" />
+
+  <!-- 立即跳转（无 JS 也生效） -->
+  <meta http-equiv="refresh" content="0;url=https://fenli.org" />
+
+  <!-- 避免把这个过期域名收录 -->
+  <meta name="robots" content="noindex,nofollow" />
+
+  <style>
+    :root { color-scheme: light dark; }
+    * { box-sizing: border-box; }
+    html,body { height: 100%; margin: 0; }
+    body {
+      display: grid;
+      place-items: center;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+      line-height: 1.6;
+      padding: 24px;
+    }
+    .card {
+      max-width: 560px;
+      width: 100%;
+      padding: 24px 28px;
+      border-radius: 16px;
+      box-shadow: 0 6px 24px rgba(0,0,0,.12);
+      background: rgba(255,255,255,.85);
+      backdrop-filter: blur(8px);
+    }
+    @media (prefers-color-scheme: dark) {
+      .card { background: rgba(20,20,20,.7); color: #eaeaea; }
+    }
+    h1 { margin: 0 0 6px; font-size: 22px; }
+    p { margin: 8px 0; }
+    a.button {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 16px;
+      border-radius: 10px;
+      text-decoration: none;
+    }
+    .button { background: #2563eb; color: #fff; }
+    .muted { opacity: .7; font-size: 14px; }
+    .spinner {
+      width: 18px; height: 18px; margin-left: 6px;
+      border: 2px solid currentColor; border-right-color: transparent;
+      border-radius: 50%; display: inline-block; vertical-align: -3px;
+      animation: spin 0.8s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+  </style>
+
+  <script>
+    // JS 跳转（比 meta 更可控）：不保留历史记录
+    (function () {
+      var target = "https://fenli.org";
+      try {
+        window.location.replace(target);
+      } catch (e) {
+        window.location.href = target; // 兜底
+      }
+    })();
+  </script>
+</head>
+<body>
+  <div class="card">
+    <h1>本站已弃用</h1>
+    <p>请转到 <strong>fenli.org</strong> 继续访问。</p>
+    <p>
+      正在为你跳转<span class="spinner" aria-hidden="true"></span>
+      <br />
+      <a class="button" href="https://fenli.org" rel="noopener">立即前往 fenli.org</a>
+    </p>
+    <p class="muted">如果没有自动跳转，请点击上面的按钮。</p>
+  </div>
+
+  <noscript>
+    <div class="card" role="alert">
+      <h1>本站已弃用</h1>
+      <p>你的浏览器禁用了 JavaScript，请手动访问：
+        <a href="https://fenli.org" rel="noopener">https://fenli.org</a>
+      </p>
+    </div>
+  </noscript>
+</body>
+</html>
